@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Person</title>
+</head>
+<body>
+    <h1>Delete a Person:</h1>
+
+    <form th:action="@{/deletePerson}"
+      th:object="${personFormId}" th:method="POST">
+    ID:
+    <input type="text" th:field="*{id}"/>
+    <br>
+    <input type="submit" value="Delete"/>
+    </form>
+
+<div th:if="${errorMessageId}" th:utext="${errorMessageId}"
+     style="color:red;font-style:italic;">
+    ...
+</div>
+</body>
+</html>

@@ -36,7 +36,6 @@ public class MainController {
         return "login";
     }
 
-    //Da comment alsjfsaflkj
     @PostMapping("/")
     public String login(Model model, PersonFormId personFormId){
         int id = personFormId.getId();
